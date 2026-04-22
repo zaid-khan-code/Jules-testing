@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "havDB5JAEJY=",
+  "dgSpecHash": "XX0BBZ2pMzw=",
   "success": true,
   "projectFilePath": "/app/backend/RepurseAI.API/RepurseAI.API.csproj",
   "expectedPackageFiles": [
     "/home/jules/.nuget/packages/fluentvalidation/12.1.1/fluentvalidation.12.1.1.nupkg.sha512",
+    "/home/jules/.nuget/packages/hangfire.aspnetcore/1.8.23/hangfire.aspnetcore.1.8.23.nupkg.sha512",
     "/home/jules/.nuget/packages/hangfire.core/1.8.23/hangfire.core.1.8.23.nupkg.sha512",
     "/home/jules/.nuget/packages/hangfire.memorystorage/1.8.1.2/hangfire.memorystorage.1.8.1.2.nupkg.sha512",
+    "/home/jules/.nuget/packages/hangfire.netcore/1.8.23/hangfire.netcore.1.8.23.nupkg.sha512",
     "/home/jules/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/10.0.7/microsoft.aspnetcore.authentication.jwtbearer.10.0.7.nupkg.sha512",
     "/home/jules/.nuget/packages/microsoft.aspnetcore.identity.entityframeworkcore/10.0.7/microsoft.aspnetcore.identity.entityframeworkcore.10.0.7.nupkg.sha512",
     "/home/jules/.nuget/packages/microsoft.aspnetcore.openapi/10.0.3/microsoft.aspnetcore.openapi.10.0.3.nupkg.sha512",
