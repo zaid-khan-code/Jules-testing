@@ -1,0 +1,16 @@
+/app/backend/RepurseAI.Application/bin/Debug/net10.0/RepurseAI.Application.deps.json
+/app/backend/RepurseAI.Application/bin/Debug/net10.0/RepurseAI.Application.dll
+/app/backend/RepurseAI.Application/bin/Debug/net10.0/RepurseAI.Application.pdb
+/app/backend/RepurseAI.Application/bin/Debug/net10.0/RepurseAI.Domain.dll
+/app/backend/RepurseAI.Application/bin/Debug/net10.0/RepurseAI.Domain.pdb
+/app/backend/RepurseAI.Application/obj/Debug/net10.0/RepurseAI.Application.csproj.AssemblyReference.cache
+/app/backend/RepurseAI.Application/obj/Debug/net10.0/RepurseAI.Application.GeneratedMSBuildEditorConfig.editorconfig
+/app/backend/RepurseAI.Application/obj/Debug/net10.0/RepurseAI.Application.AssemblyInfoInputs.cache
+/app/backend/RepurseAI.Application/obj/Debug/net10.0/RepurseAI.Application.AssemblyInfo.cs
+/app/backend/RepurseAI.Application/obj/Debug/net10.0/RepurseAI.Application.csproj.CoreCompileInputs.cache
+/app/backend/RepurseAI.Application/obj/Debug/net10.0/RepurseAI.Application.sourcelink.json
+/app/backend/RepurseAI.Application/obj/Debug/net10.0/RepurseA.EAA8FC8D.Up2Date
+/app/backend/RepurseAI.Application/obj/Debug/net10.0/RepurseAI.Application.dll
+/app/backend/RepurseAI.Application/obj/Debug/net10.0/refint/RepurseAI.Application.dll
+/app/backend/RepurseAI.Application/obj/Debug/net10.0/RepurseAI.Application.pdb
+/app/backend/RepurseAI.Application/obj/Debug/net10.0/ref/RepurseAI.Application.dll

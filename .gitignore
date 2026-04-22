@@ -1,0 +1,24 @@
+# .gitignore for RepurseAI
+
+# [.NET]
+**/bin/
+**/obj/
+**/Properties/
+*.sln.docstates
+*.user
+
+# [Node.js]
+**/node_modules/
+**/.next/
+**/out/
+**/build/
+.env
+.env.local
+
+# [Misc]
+.DS_Store
+*.pem
+*.db
+backend.log
+frontend.log
+/home/jules/verification/

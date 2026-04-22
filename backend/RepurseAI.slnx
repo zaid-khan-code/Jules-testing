@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="RepurseAI.API/RepurseAI.API.csproj" />
+  <Project Path="RepurseAI.Application/RepurseAI.Application.csproj" />
+  <Project Path="RepurseAI.Domain/RepurseAI.Domain.csproj" />
+  <Project Path="RepurseAI.Infrastructure/RepurseAI.Infrastructure.csproj" />
+</Solution>
