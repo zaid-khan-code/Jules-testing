@@ -1,0 +1,26 @@
+
+> frontend@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.4 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.2:3000
+✓ Ready in 525ms
+
+○ Compiling / ...
+⨯ Error: Event handlers cannot be passed to Client Component props.
+  <... content={{...}} onSave={function onSave}>
+                              ^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '681440715'
+}
+ GET / 500 in 4.4s (next.js: 3.6s, application-code: 842ms)
+[browser] Uncaught Error: Event handlers cannot be passed to Client Component props.
+  <... content={{...}} onSave={function onSave}>
+                              ^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>:1:18)
+    at stringify (<anonymous>:1:18)
+[?25h

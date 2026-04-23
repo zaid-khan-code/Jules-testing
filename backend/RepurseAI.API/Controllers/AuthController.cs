@@ -21,9 +21,11 @@ public class AuthController(UserManager<ApplicationUser> userManager, IConfigura
         if (user != null && await userManager.CheckPasswordAsync(user, model.Password))
         {
             var claims = new[] { new Claim("userId", user.Id), new Claim(JwtRegisteredClaimNames.Sub, user.Email!) };
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:Key"] ?? "a_very_long_secret_key_at_least_32_chars_long"));
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:Key"] ?? throw new InvalidOperationException("JWT Key not configured")));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-            var token = new JwtSecurityToken(issuer: "repurseai", audience: "repurseai", claims: claims, expires: DateTime.UtcNow.AddMinutes(15), signingCredentials: creds);
+            var issuer = configuration["Jwt:Issuer"] ?? "repurseai";
+            var audience = configuration["Jwt:Audience"] ?? "repurseai";
+            var token = new JwtSecurityToken(issuer: issuer, audience: audience, claims: claims, expires: DateTime.UtcNow.AddMinutes(15), signingCredentials: creds);
             return Ok(new { Token = new JwtSecurityTokenHandler().WriteToken(token) });
         }
         return Unauthorized();
