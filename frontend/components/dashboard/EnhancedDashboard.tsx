@@ -41,7 +41,7 @@ export default function EnhancedDashboard({ content, onSave }: { content: Dashbo
                 <div key={i} className="p-3 border rounded bg-gray-50 flex justify-between items-center">
                   <span className="font-medium text-sm">{c.Title || `Clip ${i+1}`}</span>
                   <div className="flex items-center gap-2">
-                    <span className="text-[10px] bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">Score: {c.Score}</span>
+                    <span className="text-[10px] bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">Score: {c.Score ?? 'N/A'}</span>
                     <span className="text-xs text-gray-500">{c.Start}s - {c.End}s</span>
                   </div>
                 </div>
@@ -221,12 +221,29 @@ export default function EnhancedDashboard({ content, onSave }: { content: Dashbo
 function Panel({ icon, title, color, children, onCopy }: { icon: React.ReactNode, title: string, color: string, children: React.ReactNode, onCopy?: () => void }) {
   const [copied, setCopied] = useState(false)
   const handleCopy = () => { if (onCopy) { onCopy(); setCopied(true); setTimeout(() => setCopied(false), 2000) } }
+  const colorClassMap: Record<string, string> = {
+    'blue-600': 'text-blue-600',
+    'blue-800': 'text-blue-800',
+    'black': 'text-black',
+    'pink-600': 'text-pink-600',
+    'blue-700': 'text-blue-700',
+    'orange-600': 'text-orange-600',
+    'emerald-600': 'text-emerald-600',
+    'red-600': 'text-red-600',
+    'indigo-600': 'text-indigo-600',
+    'cyan-600': 'text-cyan-600',
+    'slate-700': 'text-slate-700',
+    'yellow-600': 'text-yellow-600',
+    'purple-600': 'text-purple-600',
+    'teal-600': 'text-teal-600'
+  }
+  const iconColorClass = colorClassMap[color] || 'text-gray-500'
 
   return (
     <div className="border rounded-xl p-5 shadow-sm bg-white flex flex-col h-[450px] transition-all hover:shadow-md border-gray-100">
       <div className="flex items-center justify-between gap-2 mb-4 border-b border-gray-50 pb-3">
         <div className="flex items-center gap-2">
-          <span aria-hidden="true" className={`text-${color}`}>{icon}</span>
+          <span aria-hidden="true" className={iconColorClass}>{icon}</span>
           <h2 className="font-bold uppercase tracking-widest text-[10px] text-gray-500">{title}</h2>
         </div>
         {onCopy && (
