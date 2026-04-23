@@ -12,6 +12,8 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbCo
     public DbSet<RepurposedContent> RepurposedContents => Set<RepurposedContent>();
     public DbSet<ClipKeyword> ClipKeywords => Set<ClipKeyword>();
     public DbSet<RefreshToken> RefreshTokens => Set<RefreshToken>();
+    public DbSet<ConnectedAccount> ConnectedAccounts => Set<ConnectedAccount>();
+    public DbSet<BrandVoiceProfile> BrandVoiceProfiles => Set<BrandVoiceProfile>();
     protected override void OnModelCreating(ModelBuilder b) {
         base.OnModelCreating(b);
         b.Entity<OrganizationMember>().HasKey(om => new { om.OrganizationId, om.UserId });
