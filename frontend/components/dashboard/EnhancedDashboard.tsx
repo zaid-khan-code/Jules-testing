@@ -1,6 +1,6 @@
 "use client"
 import { useState } from 'react'
-import { Scissors, Type, Mail, Hash, BookOpen, Youtube, List, Quote, FileText, Bell } from 'lucide-react'
+import { Scissors, Type, Mail, Hash, BookOpen, Video, List, Quote, FileText, Bell } from 'lucide-react'
 
 export default function EnhancedDashboard({ content, onSave }: any) {
   const [data, setData] = useState(content)
@@ -44,7 +44,7 @@ export default function EnhancedDashboard({ content, onSave }: any) {
           <textarea className="w-full h-full p-3 border rounded resize-none" value={data.blog} />
         </Panel>
 
-        <Panel icon={<Youtube size={20}/>} title="YouTube Description" color="red-700">
+        <Panel icon={<Video size={20}/>} title="YouTube Description" color="red-700">
           <textarea className="w-full h-full p-3 border rounded resize-none" value={data.youtube} />
         </Panel>
 
