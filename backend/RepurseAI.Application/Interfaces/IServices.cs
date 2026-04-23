@@ -6,15 +6,15 @@ using RepurseAI.Domain.Entities;
 
 namespace RepurseAI.Application.Interfaces;
 
-public record TranscriptionWord(string Word, double Start, double End, double Confidence);
-public record TranscriptionResult(string Text, List<TranscriptionWord> Words);
+public record TranscriptionWord(string Word, double Start, double End, double Confidence, string? Speaker = null);
+public record TranscriptionResult(string Text, List<TranscriptionWord> Words, string? Language = null);
 
 public interface ITranscriptionService {
-    Task<TranscriptionResult> TranscribeAsync(string path);
+    Task<TranscriptionResult> TranscribeAsync(string path, string? language = null);
 }
 
 public interface IContentGenerationService {
-    Task<string> GenerateAllFormatsAsync(string transcript);
+    Task<string> GenerateAllFormatsAsync(string transcript, string? tone = null, string? targetLanguage = null);
 }
 
 public interface IAppDbContext {
@@ -24,5 +24,7 @@ public interface IAppDbContext {
     DbSet<RepurposedContent> RepurposedContents { get; }
     DbSet<ClipKeyword> ClipKeywords { get; }
     DbSet<RefreshToken> RefreshTokens { get; }
+    DbSet<ConnectedAccount> ConnectedAccounts { get; }
+    DbSet<BrandVoiceProfile> BrandVoiceProfiles { get; }
     Task<int> SaveChangesAsync(System.Threading.CancellationToken ct = default);
 }
