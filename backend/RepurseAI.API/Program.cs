@@ -19,8 +19,12 @@ builder.Services.AddAuthentication(o => {
     o.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 }).AddJwtBearer(o => {
     o.TokenValidationParameters = new TokenValidationParameters {
-        ValidateIssuer = false, ValidateAudience = false, ValidateLifetime = true,
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("a_very_long_secret_key_at_least_32_chars_long"))
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidIssuer = builder.Configuration["Jwt:Issuer"] ?? "repurseai",
+        ValidAudience = builder.Configuration["Jwt:Audience"] ?? "repurseai",
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"] ?? throw new InvalidOperationException("JWT Key not configured")))
     };
 });
 builder.Services.AddAuthorization();
